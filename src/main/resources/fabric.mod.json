@@ -1,0 +1,47 @@
+{
+	"schemaVersion": 1,
+	"id": "kingdoms",
+	"version": "${version}",
+	"name": "Kingdoms",
+	"description": ".",
+	"authors": [
+		"sandaliaball"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sandaliaball.kingdoms.KingdomsMod"
+		],
+		"client": [
+			"com.sandaliaball.kingdoms.KingdomsClientInitializer"
+		],
+		"fabric-datagen": [
+			"com.sandaliaball.kingdoms.KingdomsDataGenerator"
+		]
+	},
+	"mixins": [
+		"kingdoms.client.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.9",
+		"fabric-api": "*",
+		"minecraft": "~1.21",
+		"java": ">=21"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"custom": {
+		"modupdater": {
+			"strategy": "github",
+			"owner": "sandaliaball",
+			"repository": "kingdoms"
+		}
+	}
+}
